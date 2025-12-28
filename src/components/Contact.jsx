@@ -4,6 +4,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import axios from 'axios';
+import { API_URL } from '../config';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -32,7 +33,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post(`${API_URL}/api/contact`, formData);
       
       if (response.data.success) {
         setStatus({
