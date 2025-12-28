@@ -8,8 +8,8 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -26,7 +26,7 @@ const About = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative overflow-hidden"
             >
               <div className="glass rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full filter blur-3xl"></div>

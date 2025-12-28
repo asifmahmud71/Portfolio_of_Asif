@@ -40,10 +40,10 @@ const ScrollToTop = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-14 h-14 gradient-bg rounded-full shadow-lg shadow-primary/50 flex items-center justify-center cursor-pointer hover:shadow-xl hover:shadow-primary/70 transition-all"
+          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 w-12 h-12 md:w-14 md:h-14 gradient-bg rounded-full shadow-lg shadow-primary/50 flex items-center justify-center cursor-pointer hover:shadow-xl hover:shadow-primary/70 transition-all"
           aria-label="Scroll to top"
         >
-          <FaArrowUp size={20} className="text-white" />
+          <FaArrowUp size={18} className="text-white md:text-xl" />
         </motion.button>
       )}
     </AnimatePresence>

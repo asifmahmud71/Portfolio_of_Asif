@@ -4,7 +4,6 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import axios from 'axios';
-import { API_URL } from '../config';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -54,8 +53,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
